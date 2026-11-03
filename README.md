@@ -96,4 +96,4 @@ This is for your own job search. Several sites ask for credit when their listing
 
 Built by Milena. I designed the tool, set it up, and tested it on my own job search, and I used Claude to help write the code.
 
-Licence: [choose one, for example MIT, or delete this line]
+Licence: MIT
