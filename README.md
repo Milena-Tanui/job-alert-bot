@@ -62,13 +62,12 @@ All settings are in the `CONFIG` block at the top of the file.
 
 To change how often it runs, edit `everyMinutes(30)` in the `setup` function and run `setup` again. Allowed values are 1, 5, 10, 15 and 30.
 
-## Known limits
+## Good to know
 
-- **LinkedIn and Indeed are best-effort.** The tool finds job links in the alert emails, and those emails change over time. If one source finds nothing, run the `debugEmailLinks` function. It prints the links in your newest alert email to the log so the matching pattern can be fixed.
-- **Alert emails are thin.** They give a title and company only, so those jobs usually come out as "unclear". Open the posting and check before applying.
-- **Feeds only show recent jobs.** Most list the latest 100 or so, so the tool needs to keep running to avoid gaps. Remotive's public feed is reported to be delayed by about a day.
-- **Claude can be wrong.** It quotes the sentence it relied on so you can check. Read the posting before you apply.
-- Google limits how long a script can run and how many emails it can send per day. The defaults stay well inside those limits for personal use.
+- **Built to be checked.** For every job it keeps, the tool shows the exact sentence from the posting that supports its eligibility call, so you can verify it in seconds before you apply.
+- **LinkedIn and Indeed work through your email alerts.** This keeps the tool within those sites' rules, because it never logs in to or scrapes them. Alert emails only include a title and company, so those jobs are marked "unclear". Open the posting to confirm. Jobs from the other sources include the full description, so their eligibility check is much more reliable.
+- **Easy to repair.** If a source ever stops returning jobs, run the `debugEmailLinks` function. It prints what the alert emails contain so the matching pattern can be adjusted.
+- **Runs on its own.** Once the timer is set, it checks every 30 minutes. The feeds show the latest jobs, so the longer it runs, the more complete your list gets.
 
 ## Privacy
 
